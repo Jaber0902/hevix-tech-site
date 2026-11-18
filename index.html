@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HEVIX - TECH</title>
+<meta name="description" content="HEVIX - TECH – Apps für Apple TV und iPad und Webseiten nach Maß. Unsere Website ist gerade in Arbeit.">
+<style>
+  :root {
+    --bg: #0b1020;
+    --bg2: #141b33;
+    --text: #f4f6fb;
+    --muted: #a7b0c8;
+    --accent: #ff9f1c;
+    --line: rgba(255, 255, 255, 0.12);
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #f6f7fb;
+      --bg2: #e8ecf6;
+      --text: #121729;
+      --muted: #545d76;
+      --accent: #e07800;
+      --line: rgba(18, 23, 41, 0.12);
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: radial-gradient(1200px 600px at 15% 10%, var(--bg2), var(--bg));
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+  main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 16px;
+  }
+  .card { max-width: 640px; width: 100%; }
+  .brand {
+    font-size: clamp(40px, 9vw, 72px);
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    margin: 0 0 8px;
+  }
+  .brand span { color: var(--accent); }
+  .badge {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: 999px;
+    padding: 4px 12px;
+    margin-bottom: 28px;
+  }
+  h2 { font-size: clamp(22px, 4.5vw, 30px); margin: 0 0 12px; font-weight: 700; }
+  p { font-size: 18px; line-height: 1.6; color: var(--muted); margin: 0 0 16px; }
+  .en { border-top: 1px solid var(--line); margin-top: 28px; padding-top: 24px; }
+  .en p { font-size: 16px; }
+  a { color: var(--accent); }
+  footer {
+    padding: 20px 16px 28px;
+    text-align: center;
+    font-size: 14px;
+    color: var(--muted);
+  }
+  footer a { color: var(--muted); margin: 0 10px; }
+</style>
+</head>
+<body>
+<main>
+  <div class="card">
+    <h1 class="brand">HEVIX <span>-</span> TECH</h1>
+    <div class="badge">Bald verfügbar</div>
+    <h2>Unsere Website ist gerade in Arbeit.</h2>
+    <p>Bald sind wir für Sie da – mit Apps für Apple TV und iPad und mit Webseiten nach Maß.</p>
+    <p>Kontakt: <a href="mailto:jaber@jaberahmi.de">jaber@jaberahmi.de</a></p>
+    <div class="en" lang="en">
+      <p><strong>Our website is under construction.</strong> We'll be live soon.</p>
+    </div>
+  </div>
+</main>
+<footer>
+  <a href="impressum.html">Impressum</a>
+  <a href="impressum.html#datenschutz">Datenschutz</a>
+</footer>
+</body>
+</html>
