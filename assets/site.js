@@ -47,13 +47,17 @@
       return b;
     });
 
+    // Markennamen mit dem Logo-X (oranger Strich oben)
+    const BX = '<svg class="bx" viewBox="0 0 97 100" aria-hidden="true"><use href="#bx"/></svg><span class="sr-only">X</span>';
+    const brand = (t) => t.replace(/HEVIX/g, '<span class="bxw">HEVI' + BX + "</span>").replace(/XiPlay/g, '<span class="bxw">' + BX + "iPlay</span>");
+
     function paintInfo(i) {
       const c = channels[i];
       const n = channels[(i + 1) % channels.length];
       num.textContent = String(i + 1);
-      name.textContent = c.name;
-      now.textContent = `Jetzt: ${c.now}`;
-      next.textContent = `Danach: ${n.name}`;
+      name.innerHTML = brand(c.name);
+      now.innerHTML = brand(`Jetzt: ${c.now}`);
+      next.innerHTML = brand(`Danach: ${n.name}`);
       bar.style.width = `${Math.round(c.progress * 100)}%`;
       logo.innerHTML = c.name === "XiPlay"
         ? '<img src="/assets/zapp-icon.png" alt="">'
