@@ -17,7 +17,7 @@
     const channels = [
       { name: "HEVIX - TECH", now: "Eigene Apps für jeden Bildschirm", progress: 0.32 },
       { name: "Apps", now: "Apps für Handy, Tablet und Fernseher", progress: 0.58 },
-      { name: "Zapp", now: "Zapp, bald im App Store", progress: 0.76 },
+      { name: "XiPlay", now: "XiPlay, bald im App Store", progress: 0.76 },
     ];
     const views = [...screen.querySelectorAll(".channel")];
     const num = screen.querySelector(".ib-num");
@@ -55,7 +55,7 @@
       now.textContent = `Jetzt: ${c.now}`;
       next.textContent = `Danach: ${n.name}`;
       bar.style.width = `${Math.round(c.progress * 100)}%`;
-      logo.innerHTML = c.name === "Zapp"
+      logo.innerHTML = c.name === "XiPlay"
         ? '<img src="/assets/zapp-icon.png" alt="">'
         : logoMark;
       dots.forEach((d, k) => d.setAttribute("aria-current", k === i ? "true" : "false"));
@@ -114,7 +114,7 @@
     });
     screen.addEventListener("pointercancel", () => { startX = startY = null; });
 
-    // Uhr wie in der Infoleiste von Zapp
+    // Uhr wie in der Infoleiste von XiPlay
     const clock = screen.querySelector(".ib-clock");
     const fmt = new Intl.DateTimeFormat("de-DE", { hour: "2-digit", minute: "2-digit" });
     const tick = () => { const d = new Date(); clock.textContent = fmt.format(d); clock.dateTime = d.toISOString(); };
