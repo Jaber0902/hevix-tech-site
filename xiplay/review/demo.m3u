@@ -8,25 +8,25 @@
 # - Nosferatu (1922): gemeinfrei (Murnau † 1931, Galeen † 1949). Datei von archive.org.
 # - Kein TV-Guide (url-tvg): freie Programmdaten gibt es nur aus Drittquellen, die nicht von den Sendern stammen.
 # Vor dem Einreichen alle Einträge prüfen – Sender ändern ihre Adressen gelegentlich.
-#EXTINF:-1 tvg-chno="1" tvg-logo="https://i.imgur.com/8MRNFb9.png" group-title="English",DW English
+#EXTINF:-1 tvg-chno="1" tvg-logo="https://i.imgur.com/8MRNFb9.png" group-title="Kanäle",DW English
 https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/master.m3u8
-#EXTINF:-1 tvg-chno="2" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_FRANCE_24/images/LOGO_HD/image.png" group-title="English",France 24 English
+#EXTINF:-1 tvg-chno="2" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_FRANCE_24/images/LOGO_HD/image.png" group-title="Kanäle",France 24 English
 https://live.france24.com/hls/live/2037218/F24_EN_HI_HLS/master_5000.m3u8
-#EXTINF:-1 tvg-chno="3" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/NHK_World_Japan.png" group-title="English",NHK World-Japan
+#EXTINF:-1 tvg-chno="3" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/NHK_World_Japan.png" group-title="Kanäle",NHK World-Japan
 https://masterpl.hls.nhkworld.jp/hls/w/live/smarttv.m3u8
-#EXTINF:-1 tvg-chno="4" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Red_Bull_TV.png" group-title="English",Red Bull TV
+#EXTINF:-1 tvg-chno="4" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Red_Bull_TV.png" group-title="Kanäle",Red Bull TV
 https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8
-#EXTINF:-1 tvg-chno="5" tvg-logo="https://i.imgur.com/LH0Gctv.png" group-title="Deutsch",tagesschau24
+#EXTINF:-1 tvg-chno="5" tvg-logo="https://i.imgur.com/LH0Gctv.png" group-title="Kanäle",tagesschau24
 https://tagesschau.akamaized.net/hls/live/2020115/tagesschau/tagesschau_1/master.m3u8
-#EXTINF:-1 tvg-chno="6" tvg-logo="https://staticcyl.euronews.com/wp-content/uploads/2023/03/Logo_Euronews_white-on-neon_german_RGB.png" group-title="Deutsch",Euronews Deutsch
+#EXTINF:-1 tvg-chno="6" tvg-logo="https://staticcyl.euronews.com/wp-content/uploads/2023/03/Logo_Euronews_white-on-neon_german_RGB.png" group-title="Kanäle",Euronews Deutsch
 https://cdn-euronews.akamaized.net/live/eds/euronews-de/25027/index.m3u8
-#EXTINF:-1 tvg-chno="7" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Logo_NDR_Fernsehen_2017.svg/960px-Logo_NDR_Fernsehen_2017.svg.png" group-title="Deutsch",NDR International
+#EXTINF:-1 tvg-chno="7" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Logo_NDR_Fernsehen_2017.svg/960px-Logo_NDR_Fernsehen_2017.svg.png" group-title="Kanäle",NDR International
 https://ndrint.akamaized.net/hls/live/2020766/ndr_int/index.m3u8
-#EXTINF:-1 tvg-chno="8" tvg-logo="https://i.imgur.com/vZdNp5S.png" group-title="Deutsch",KiKA
+#EXTINF:-1 tvg-chno="8" tvg-logo="https://i.imgur.com/vZdNp5S.png" group-title="Kanäle",KiKA
 https://kikahls.akamaized.net/hls/live/2022690/livetvkika_ww/master.m3u8
-#EXTINF:-1 tvg-chno="9" tvg-logo="https://i.imgur.com/8MRNFb9.png" group-title="Arabisch",DW عربية
+#EXTINF:-1 tvg-chno="9" tvg-logo="https://i.imgur.com/8MRNFb9.png" group-title="Kanäle",DW عربية
 https://dwamdstream103.akamaized.net/hls/live/2015526/dwstream103/master.m3u8
-#EXTINF:-1 tvg-chno="10" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_FRANCE_24/images/LOGO_HD/image.png" group-title="Arabisch",France 24 عربي
+#EXTINF:-1 tvg-chno="10" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_FRANCE_24/images/LOGO_HD/image.png" group-title="Kanäle",France 24 عربي
 https://live.france24.com/hls/live/2037222/F24_AR_HI_HLS/master_5000.m3u8
 #EXTINF:-1 tvg-logo="https://archive.org/services/img/BigBuckBunny_124" group-title="Blender Open Movies",Big Buck Bunny (2008)
 https://archive.org/download/BigBuckBunnyFULLHD60FPS/Big%20Buck%20Bunny%20-%20FULL%20HD%2060FPS.mp4
