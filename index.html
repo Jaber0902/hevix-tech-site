@@ -2,94 +2,236 @@
 <html lang="de">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>HEVIX - TECH</title>
-<meta name="description" content="HEVIX - TECH – Apps für Apple TV und iPad und Webseiten nach Maß. Unsere Website ist gerade in Arbeit.">
-<style>
-  :root {
-    --bg: #0b1020;
-    --bg2: #141b33;
-    --text: #f4f6fb;
-    --muted: #a7b0c8;
-    --accent: #ff9f1c;
-    --line: rgba(255, 255, 255, 0.12);
-  }
-  @media (prefers-color-scheme: light) {
-    :root {
-      --bg: #f6f7fb;
-      --bg2: #e8ecf6;
-      --text: #121729;
-      --muted: #545d76;
-      --accent: #e07800;
-      --line: rgba(18, 23, 41, 0.12);
-    }
-  }
-  * { box-sizing: border-box; }
-  html, body { height: 100%; }
-  body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background: radial-gradient(1200px 600px at 15% 10%, var(--bg2), var(--bg));
-    color: var(--text);
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
-  }
-  main {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 48px 16px;
-  }
-  .card { max-width: 640px; width: 100%; }
-  .brand {
-    font-size: clamp(40px, 9vw, 72px);
-    font-weight: 800;
-    letter-spacing: 0.02em;
-    margin: 0 0 8px;
-  }
-  .brand span { color: var(--accent); }
-  .badge {
-    display: inline-block;
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--accent);
-    border: 1px solid var(--accent);
-    border-radius: 999px;
-    padding: 4px 12px;
-    margin-bottom: 28px;
-  }
-  h2 { font-size: clamp(22px, 4.5vw, 30px); margin: 0 0 12px; font-weight: 700; }
-  p { font-size: 18px; line-height: 1.6; color: var(--muted); margin: 0 0 16px; }
-  .en { border-top: 1px solid var(--line); margin-top: 28px; padding-top: 24px; }
-  .en p { font-size: 16px; }
-  a { color: var(--accent); }
-  footer {
-    padding: 20px 16px 28px;
-    text-align: center;
-    font-size: 14px;
-    color: var(--muted);
-  }
-  footer a { color: var(--muted); margin: 0 10px; }
-</style>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>HEVIX - TECH – Apps für jeden Bildschirm, Webseiten für Ihr Geschäft</title>
+<meta name="description" content="HEVIX - TECH aus Schwülper bei Braunschweig entwickelt Apps für Handy, Tablet und Fernseher und baut Webseiten, die auf jedem Bildschirm einfach zu bedienen sind.">
+<link rel="canonical" href="https://hevix-tech.de/">
+<meta name="theme-color" content="#EDF0F5" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0A0F22" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta property="og:url" content="https://hevix-tech.de/">
+<meta property="og:title" content="HEVIX - TECH">
+<meta property="og:description" content="Apps für jeden Bildschirm. Webseiten für Ihr Geschäft.">
+<meta property="og:image" content="https://hevix-tech.de/assets/og-image.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/site.css">
+<script>document.documentElement.classList.add("js")</script>
+<script src="/assets/vendor/gsap.min.js" defer></script>
+<script src="/assets/site.js" defer></script>
 </head>
 <body>
-<main>
-  <div class="card">
-    <h1 class="brand">HEVIX <span>-</span> TECH</h1>
-    <div class="badge">Bald verfügbar</div>
-    <h2>Unsere Website ist gerade in Arbeit.</h2>
-    <p>Bald sind wir für Sie da – mit Apps für Apple TV und iPad und mit Webseiten nach Maß.</p>
-    <p>Kontakt: <a href="mailto:info@hevix-tech.de">info@hevix-tech.de</a></p>
-    <div class="en" lang="en">
-      <p><strong>Our website is under construction.</strong> We'll be live soon.</p>
-    </div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="mark" viewBox="0 0 48 48">
+    <path d="M24 3 42.19 13.5V34.5L24 45 5.81 34.5V13.5Z" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linejoin="round"/>
+    <path d="M17 17 31 31" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+    <path d="M31 17 17 31" stroke="#FAA829" stroke-width="5" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="logo" viewBox="0 0 354 48">
+    <use href="#mark" width="48" height="48"/>
+    <g fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M66 10V38M86 10V38M66 24H86"/><path d="M118 10H100V38H118M100 24H115"/>
+      <path d="M132 10 143.5 38 155 10"/><path d="M169 10V38"/><path d="M183 10 204 38"/>
+    </g>
+    <g fill="none" stroke="#FAA829" stroke-width="6" stroke-linecap="round"><path d="M204 10 183 38"/><path d="M218 24H226"/></g>
+    <g fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M240 10H260M250 10V38"/><path d="M288 10H272V38H288M272 24H285"/>
+      <path d="M320 14.5A13.5 14 0 1 0 320 33.5"/><path d="M332 10V38M350 10V38M332 24H350"/>
+    </g>
+  </symbol>
+  <symbol id="chev" viewBox="0 0 24 24"><path d="M6 15l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></g></symbol>
+  <symbol id="copy" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2.5"/><path d="M16 8V6.5A2.5 2.5 0 0 0 13.5 4h-7A2.5 2.5 0 0 0 4 6.5v7A2.5 2.5 0 0 0 6.5 16H8"/></g></symbol>
+  <symbol id="menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+</svg>
+
+<a class="skip" href="#inhalt">Zum Inhalt springen</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="HEVIX - TECH, zur Startseite"><svg viewBox="0 0 354 48" aria-hidden="true"><use href="#logo"/></svg></a>
+    <nav aria-label="Hauptmenü">
+      <ul class="nav-links">
+        <li><a href="#apps">Apps</a></li>
+        <li><a href="#webseiten">Webseiten</a></li>
+        <li><a href="#zapp">Zapp</a></li>
+        <li><a class="btn btn-primary btn-small nav-cta" href="#kontakt">Kontakt</a></li>
+      </ul>
+      <details class="menu">
+        <summary><svg aria-hidden="true"><use href="#menu"/></svg>Menü</summary>
+        <ul>
+          <li><a href="#apps">Apps</a></li>
+          <li><a href="#webseiten">Webseiten</a></li>
+          <li><a href="#zapp">Zapp</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </details>
+    </nav>
   </div>
+</header>
+
+<main id="inhalt">
+  <section class="hero" aria-labelledby="titel">
+    <div class="wrap">
+      <div class="hero-text">
+        <h1 id="titel"><span>Apps für jeden Bildschirm.</span> <span>Webseiten für Ihr Geschäft.</span></h1>
+        <p class="lead"><span translate="no">HEVIX&nbsp;-&nbsp;TECH</span> ist ein kleines Studio aus Schwülper bei Braunschweig. Ich entwickle Apps für Handy, Tablet und Fernseher und baue Webseiten, die auf jedem Bildschirm einfach zu bedienen sind.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="mailto:info@hevix-tech.de?subject=Projektanfrage"><svg aria-hidden="true"><use href="#mail"/></svg>Projekt anfragen</a>
+          <a class="btn btn-quiet" href="#zapp">Zapp ansehen</a>
+        </div>
+      </div>
+
+      <figure class="tv">
+        <div class="tv-bezel">
+          <div class="tv-screen" tabindex="0" role="group" aria-roledescription="Fernseher"
+               aria-label="Fernseher mit vier Kanälen. Mit den Pfeiltasten nach oben und unten wechseln Sie den Kanal.">
+            <div class="channel ch-home" data-channel="0">
+              <svg viewBox="0 0 48 48" aria-hidden="true"><use href="#mark"/></svg>
+              <p>Apps und Webseiten</p>
+              <p class="sub">aus Schwülper bei Braunschweig</p>
+            </div>
+
+            <div class="channel" data-channel="1" hidden aria-hidden="true">
+              <div class="mini-devices">
+                <div class="dev dev-phone"><i class="h"></i><i></i><i></i><i class="o"></i></div>
+                <div class="dev dev-tablet"><i class="h"></i><span><i></i><i></i></span><i></i></div>
+                <div class="dev dev-tv"><div class="mini-row"><i></i><i></i><i></i><i></i></div></div>
+              </div>
+            </div>
+
+            <div class="channel" data-channel="2" hidden aria-hidden="true">
+              <div class="mini-web">
+                <div class="mini-browser">
+                  <div class="bar"><b></b><b></b><b></b></div>
+                  <div class="page"><i class="nav"></i><div class="mh"></div><div class="lines"><i></i><i></i><i></i></div></div>
+                </div>
+                <div class="mini-phone"><div class="page"><i class="h"></i><i></i><i></i><i class="o"></i><i></i></div></div>
+              </div>
+            </div>
+
+            <div class="channel ch-zapp" data-channel="3" hidden aria-hidden="true">
+              <img src="/assets/zapp-icon.png" srcset="/assets/zapp-icon@2x.png 2x" alt="" width="192" height="192">
+              <p>Zapp</p>
+              <p class="sub">Bald im App Store</p>
+            </div>
+
+            <div class="infobar" aria-hidden="true">
+              <div class="ib-logo"><svg viewBox="0 0 48 48"><use href="#mark"/></svg></div>
+              <div>
+                <div class="ib-title"><span class="ib-num">1</span><span class="ib-name"><span translate="no">HEVIX&nbsp;-&nbsp;TECH</span></span><span class="ib-badge">HD</span></div>
+                <p class="ib-now">Jetzt: Willkommen</p>
+                <div class="ib-bar"><i></i></div>
+                <p class="ib-next">Danach: Apps</p>
+              </div>
+              <time class="ib-clock">--:--</time>
+            </div>
+
+            <div class="tv-static" aria-hidden="true"></div>
+            <div class="tv-power" aria-hidden="true"></div>
+          </div>
+        </div>
+        <div class="tv-stand" aria-hidden="true"></div>
+
+        <div class="remote">
+          <button class="remote-btn" type="button" data-zap="1" aria-label="Nächster Kanal"><svg aria-hidden="true"><use href="#chev"/></svg></button>
+          <span class="remote-label">Kanal wechseln</span>
+          <button class="remote-btn" type="button" data-zap="-1" aria-label="Vorheriger Kanal"><svg aria-hidden="true" style="transform:rotate(180deg)"><use href="#chev"/></svg></button>
+        </div>
+        <ul class="channel-list" aria-label="Kanäle"></ul>
+        <figcaption class="sr-only" aria-live="polite" id="kanal-ansage">Kanal 1: <span translate="no">HEVIX&nbsp;-&nbsp;TECH</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section" id="apps" aria-labelledby="apps-titel">
+    <div class="wrap split">
+      <div class="head">
+        <h2 id="apps-titel">Apps für jeden Bildschirm</h2>
+        <p>Ich entwickle Apps, die sich auf ihrem Gerät zu Hause fühlen: flüssig, klar und so bedienbar, wie man es dort gewohnt ist, ob per Touch, Maus oder Fernbedienung.</p>
+      </div>
+      <ul class="points">
+        <li><h3>Handy und Tablet</h3><p>Für iPhone, iPad und Android, jeweils passend zum Bildschirm und zu den Gewohnheiten der Plattform.</p></li>
+        <li><h3>Fernseher</h3><p>Apps für Apple&nbsp;TV, Android&nbsp;TV und andere Smart-TVs: große Schrift, ein klarer Fokus und jede Funktion mit der Fernbedienung erreichbar.</p></li>
+        <li><h3>In mehreren Sprachen</h3><p>Zum Beispiel Deutsch, Englisch, Französisch und Arabisch, auch mit Schrift von rechts nach links.</p></li>
+        <li><h3>Bis in den Store</h3><p>Testzeitraum, Kauf in der App, Angaben zum Datenschutz und die Veröffentlichung im App Store oder bei Google Play.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="webseiten" aria-labelledby="web-titel">
+    <div class="wrap">
+      <div class="head">
+        <h2 id="web-titel">Webseiten für Ihr Geschäft</h2>
+        <p>Eine gute Webseite zeigt schnell, wer Sie sind, was Sie anbieten und wie man Sie erreicht. Am Handy genauso wie am Rechner.</p>
+      </div>
+      <ol class="steps">
+        <li><div><h3>Gespräch</h3><p>Wir klären, was Ihre Seite können soll und wen sie erreichen soll.</p></div></li>
+        <li><div><h3>Entwurf</h3><p>Sie sehen Ihre Seite, bevor sie online geht, und sagen, was anders werden soll.</p></div></li>
+        <li><div><h3>Umsetzung</h3><p>Texte, Bilder, die Ansicht fürs Handy, Impressum und Datenschutz.</p></div></li>
+        <li><div><h3>Online</h3><p>Ihre Domain, eine sichere Verbindung und eine kurze Einweisung.</p></div></li>
+      </ol>
+      <p class="note"><strong>Ohne Tracking.</strong> Ihre Besucher werden nicht verfolgt, und Sie brauchen kein Cookie-Banner, solange Sie keine Dienste einbinden, die eines verlangen.</p>
+    </div>
+  </section>
+
+  <section class="section zapp-band" id="zapp" aria-labelledby="zapp-titel">
+    <div class="wrap split">
+      <div class="head">
+        <div class="zapp-id">
+          <img src="/assets/zapp-icon.png" srcset="/assets/zapp-icon@2x.png 2x" alt="App-Symbol von Zapp" width="76" height="76" loading="lazy" decoding="async">
+          <div>
+            <h2 id="zapp-titel" translate="no">Zapp</h2>
+            <p class="status">Bald im App Store</p>
+          </div>
+        </div>
+        <p>Der Player für Ihre eigenen Senderlisten, Filme und Serien auf Apple&nbsp;TV und iPad. Mit TV-Guide, Favoriten, Weiterschauen und Kindersicherung.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="mailto:info@hevix-tech.de?subject=Hilfe%20zu%20Zapp">Hilfe zu Zapp</a>
+          <a class="btn btn-quiet" href="/datenschutz.html#zapp">Datenschutz bei Zapp</a>
+        </div>
+        <p class="fineprint">Zapp enthält keine Sender, Filme oder Serien und empfiehlt keine Anbieter. Sie brauchen eine eigene Liste oder ein eigenes Netzwerklaufwerk.</p>
+      </div>
+      <ul class="points">
+        <li><h3>Erst testen, dann kaufen</h3><p>7&nbsp;Tage kostenlos ausprobieren, danach einmal kaufen und dauerhaft nutzen.</p></li>
+        <li><h3>Ihre Daten bleiben bei Ihnen</h3><p>Keine Werbung, kein Tracking. Zugangsdaten liegen nur im Schlüsselbund Ihres Geräts.</p></li>
+        <li><h3>Gemacht für die Fernbedienung</h3><p>Sender wechseln mit den Pfeiltasten, Filme und Serien dort weiterschauen, wo Sie aufgehört haben.</p></li>
+        <li><h3>In Ihrer Sprache</h3><p>Deutsch, Englisch, Französisch und Arabisch.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section about" id="ueber" aria-labelledby="ueber-titel">
+    <div class="wrap">
+      <h2 id="ueber-titel">Über <span translate="no">HEVIX&nbsp;-&nbsp;TECH</span></h2>
+      <p>Hinter <span translate="no">HEVIX&nbsp;-&nbsp;TECH</span> stehe ich, Kasem Ahmi. Ich komme aus der IT-Administration und entwickle Apps und Webseiten mit einem Anspruch: Alles soll so einfach zu bedienen sein, dass man nicht darüber nachdenken muss.</p>
+    </div>
+  </section>
+
+  <section class="section contact" id="kontakt" aria-labelledby="kontakt-titel">
+    <div class="wrap">
+      <h2 id="kontakt-titel">Erzählen Sie mir von Ihrem Projekt</h2>
+      <p class="intro">Ob App oder Webseite: Schreiben Sie mir kurz, worum es geht. Ich melde mich so schnell wie möglich.</p>
+      <div class="contact-box">
+        <a class="btn btn-primary" href="mailto:info@hevix-tech.de?subject=Projektanfrage"><svg aria-hidden="true"><use href="#mail"/></svg>E-Mail schreiben</a>
+        <span class="contact-mail">info@hevix-tech.de</span>
+        <button class="btn btn-quiet btn-small copy" type="button" data-copy="info@hevix-tech.de" hidden><svg aria-hidden="true"><use href="#copy"/></svg>Adresse kopieren</button>
+      </div>
+      <p class="copy-state" role="status"></p>
+    </div>
+  </section>
 </main>
-<footer>
-  <a href="impressum.html">Impressum</a>
-  <a href="impressum.html#datenschutz">Datenschutz</a>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <svg viewBox="0 0 354 48" role="img" aria-label="HEVIX - TECH"><use href="#logo"/></svg>
+    <span>© 2026 <span translate="no">HEVIX&nbsp;-&nbsp;TECH</span>, Schwülper</span>
+    <nav aria-label="Rechtliches">
+      <a href="/impressum.html">Impressum</a>
+      <a href="/datenschutz.html">Datenschutz</a>
+    </nav>
+  </div>
 </footer>
 </body>
 </html>
