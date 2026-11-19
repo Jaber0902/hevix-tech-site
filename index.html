@@ -16,10 +16,10 @@
 <meta property="og:image" content="https://hevix-tech.de/assets/og-image.png">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="stylesheet" href="/assets/site.css?v=4">
+<link rel="stylesheet" href="/assets/site.css?v=6">
 <script>document.documentElement.classList.add("js")</script>
 <script src="/assets/vendor/gsap.min.js" defer></script>
-<script src="/assets/site.js?v=4" defer></script>
+<script src="/assets/site.js?v=6" defer></script>
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
@@ -50,6 +50,7 @@
   <symbol id="i-lock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10.5" width="14" height="10" rx="2.5"/><path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5"/></g></symbol>
   <symbol id="i-drive" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14.5 6.6 6.3A2 2 0 0 1 8.5 5h7a2 2 0 0 1 1.9 1.3L20 14.5"/><rect x="4" y="14.5" width="16" height="5" rx="2"/><path d="M16.5 17h.01"/></g></symbol>
   <symbol id="i-shield" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5 19 6v5.5c0 4.2-2.9 7.6-7 9-4.1-1.4-7-4.8-7-9V6Z"/><path d="m9 12 2.2 2.2L15.5 10"/></g></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2.5"/><path d="M6.5 8h4v4h-4zM13.5 8h4M13.5 12h4M9 20h6"/></g></symbol>
   <symbol id="menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
 </svg>
 
@@ -60,7 +61,7 @@
     <a class="brand" href="/" aria-label="HEVIX - TECH, zur Startseite"><svg viewBox="0 0 354 48" aria-hidden="true"><use href="#logo"/></svg></a>
     <nav aria-label="Hauptmenü">
       <details class="menu">
-        <summary><svg aria-hidden="true"><use href="#menu"/></svg>Menü</summary>
+        <summary><svg class="menu-mark" viewBox="0 0 48 48" aria-hidden="true"><use href="#mark"/></svg>Menü</summary>
         <ul>
           <li><a href="#apps">Apps</a></li>
           <li><a href="#zapp"><span translate="no">Zapp</span></a></li>
@@ -149,7 +150,7 @@
           <img src="/assets/zapp-icon.png" srcset="/assets/zapp-icon@2x.png 2x" alt="" width="88" height="88" loading="lazy" decoding="async">
           <div class="app-body">
             <h3 translate="no">Zapp</h3>
-            <p>Der Player für Ihre eigenen Senderlisten, Filme und Serien.</p>
+            <p>Der Player für Ihre eigenen Senderlisten, Filme und Serien und für Videos vom eigenen Netzwerklaufwerk.</p>
             <ul class="chips" aria-label="Geräte"><li>Apple&nbsp;TV</li><li>iPad</li></ul>
           </div>
           <div class="app-foot">
@@ -194,11 +195,30 @@
           </div>
         </div>
         <div class="zapp-intro">
-          <p>Der Player für Ihre eigenen Senderlisten, Filme und Serien auf Apple&nbsp;TV und iPad. 7&nbsp;Tage kostenlos testen, danach einmal kaufen und dauerhaft nutzen.</p>
+          <p>Der Player für Ihre eigenen Senderlisten, Filme und Serien und für Ihre Videos vom eigenen Netzwerklaufwerk, auf Apple&nbsp;TV und iPad. 7&nbsp;Tage kostenlos testen, danach einmal kaufen und dauerhaft nutzen.</p>
           <div class="actions">
             <a class="btn btn-primary" href="mailto:info@hevix-tech.de?subject=Hilfe%20zu%20Zapp"><span>Hilfe zu <span translate="no">Zapp</span></span></a>
             <a class="btn btn-quiet" href="/datenschutz.html#zapp">Datenschutz</a>
           </div>
+        </div>
+      </div>
+
+      <div class="nas">
+        <div class="nas-text">
+          <h3 class="nas-title">Ihr Netzwerklaufwerk als Mediathek</h3>
+          <p>Binden Sie Ihr eigenes Netzwerklaufwerk ein, zum Beispiel ein NAS oder die Festplatte am Router. <span translate="no">Zapp</span> zeigt Ihre Ordner als Mediathek, mit Vorschaubildern, und merkt sich, wo Sie aufgehört haben.</p>
+          <ul class="nas-list">
+            <li>Verbindung per SMB oder WebDAV</li>
+            <li>Ordner werden zu Reihen, Videos zu Kacheln mit Vorschaubild</li>
+            <li>Weiterschauen auch bei Ihren eigenen Videos</li>
+            <li>Auch Ihre Senderliste kann auf dem Netzwerklaufwerk liegen</li>
+          </ul>
+        </div>
+        <div class="nas-visual" aria-hidden="true">
+          <div class="nas-bar"><svg><use href="#i-drive"/></svg><span>Mediathek</span></div>
+          <div class="nas-row"><b>Urlaub</b><div><i></i><i></i><i></i><i></i></div></div>
+          <div class="nas-row"><b>Familie</b><div><i></i><i></i><i></i><i></i></div></div>
+          <div class="nas-row"><b>Konzerte</b><div><i></i><i></i><i></i><i></i></div></div>
         </div>
       </div>
 
@@ -207,7 +227,7 @@
         <li><svg aria-hidden="true"><use href="#i-film"/></svg><h3>Filme und Serien</h3><p>Mit Weiterschauen genau dort, wo Sie aufgehört haben.</p></li>
         <li><svg aria-hidden="true"><use href="#i-star"/></svg><h3>Favoriten und Reihenfolge</h3><p>Sender und Gruppen so sortieren und ausblenden, wie Sie es mögen.</p></li>
         <li><svg aria-hidden="true"><use href="#i-lock"/></svg><h3>Kindersicherung</h3><p>Gruppen mit einer PIN sperren, auch in der Suche.</p></li>
-        <li><svg aria-hidden="true"><use href="#i-drive"/></svg><h3>Eigene Videos</h3><p>Filme und Aufnahmen direkt vom eigenen Netzwerklaufwerk abspielen.</p></li>
+        <li><svg aria-hidden="true"><use href="#i-home"/></svg><h3>Auf dem Startbildschirm</h3><p>Zuletzt gesehen und Ihre Auswahl direkt im oberen Bereich des Apple&nbsp;TV.</p></li>
         <li><svg aria-hidden="true"><use href="#i-shield"/></svg><h3>Ohne Werbung und Tracking</h3><p>Zugangsdaten bleiben im Schlüsselbund Ihres Geräts.</p></li>
       </ul>
       <p class="fineprint">Zapp enthält keine Sender, Filme oder Serien und empfiehlt keine Anbieter. Sie brauchen eine eigene Liste oder ein eigenes Netzwerklaufwerk.</p>
