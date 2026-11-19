@@ -16,10 +16,10 @@
 <meta property="og:image" content="https://hevix-tech.de/assets/og-image.png">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="stylesheet" href="/assets/site.css?v=3">
+<link rel="stylesheet" href="/assets/site.css?v=4">
 <script>document.documentElement.classList.add("js")</script>
 <script src="/assets/vendor/gsap.min.js" defer></script>
-<script src="/assets/site.js?v=3" defer></script>
+<script src="/assets/site.js?v=4" defer></script>
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
@@ -43,6 +43,13 @@
   <symbol id="chev" viewBox="0 0 24 24"><path d="M6 15l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   <symbol id="mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></g></symbol>
   <symbol id="copy" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2.5"/><path d="M16 8V6.5A2.5 2.5 0 0 0 13.5 4h-7A2.5 2.5 0 0 0 4 6.5v7A2.5 2.5 0 0 0 6.5 16H8"/></g></symbol>
+  <symbol id="check" viewBox="0 0 24 24"><path d="M5 12.5 10 17 19 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-tv" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="12" rx="2.5"/><path d="M8 20h8"/></g></symbol>
+  <symbol id="i-film" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4" width="17" height="16" rx="2.5"/><path d="M7.5 4v16M16.5 4v16M3.5 9h4M3.5 15h4M16.5 9h4M16.5 15h4"/></g></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3.8 2.5 5.1 5.6.8-4 4 .9 5.6L12 16.6l-5 2.7.9-5.6-4-4 5.6-.8Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10.5" width="14" height="10" rx="2.5"/><path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5"/></g></symbol>
+  <symbol id="i-drive" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14.5 6.6 6.3A2 2 0 0 1 8.5 5h7a2 2 0 0 1 1.9 1.3L20 14.5"/><rect x="4" y="14.5" width="16" height="5" rx="2"/><path d="M16.5 17h.01"/></g></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5 19 6v5.5c0 4.2-2.9 7.6-7 9-4.1-1.4-7-4.8-7-9V6Z"/><path d="m9 12 2.2 2.2L15.5 10"/></g></symbol>
   <symbol id="menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
 </svg>
 
@@ -131,11 +138,41 @@
     </div>
   </section>
 
-  <section class="section" id="apps" aria-labelledby="apps-titel">
+  <section class="section shelf-section" id="apps" aria-labelledby="apps-titel">
+    <div class="wrap">
+      <div class="shelf-head">
+        <h2 id="apps-titel">Apps von <span translate="no">HEVIX&nbsp;-&nbsp;TECH</span></h2>
+        <p>Selbst entwickelt, selbst veröffentlicht und dauerhaft gepflegt.</p>
+      </div>
+      <ul class="shelf">
+        <li class="app-card">
+          <img src="/assets/zapp-icon.png" srcset="/assets/zapp-icon@2x.png 2x" alt="" width="88" height="88" loading="lazy" decoding="async">
+          <div class="app-body">
+            <h3 translate="no">Zapp</h3>
+            <p>Der Player für Ihre eigenen Senderlisten, Filme und Serien.</p>
+            <ul class="chips" aria-label="Geräte"><li>Apple&nbsp;TV</li><li>iPad</li></ul>
+          </div>
+          <div class="app-foot">
+            <span class="status">Bald im App Store</span>
+            <a class="btn btn-primary btn-small" href="#zapp"><span>Mehr zu <span translate="no">Zapp</span></span></a>
+          </div>
+        </li>
+        <li class="app-card app-next" aria-label="Die nächste App ist in Arbeit">
+          <div class="next-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><use href="#mark"/></svg></div>
+          <div class="app-body">
+            <h3>Die nächste App</h3>
+            <p>Ist in Arbeit. Hier erscheint sie, sobald sie fertig ist.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="prinzip" aria-labelledby="prinzip-titel">
     <div class="wrap split">
       <div class="head">
-        <h2 id="apps-titel">Apps, die sich zu Hause fühlen</h2>
-        <p><span translate="no">HEVIX&nbsp;-&nbsp;TECH</span> entwickelt seine Apps selbst, veröffentlicht sie selbst und kümmert sich dauerhaft um sie. Jede App soll auf ihrem Gerät so bedienbar sein, wie man es dort gewohnt ist: per Touch, Maus oder Fernbedienung.</p>
+        <h2 id="prinzip-titel">Apps, die sich wie zu Hause anfühlen</h2>
+        <p>Jede App soll auf ihrem Gerät so bedienbar sein, wie man es dort gewohnt ist: per Touch, Maus oder Fernbedienung.</p>
       </div>
       <ul class="points">
         <li><h3>Handy und Tablet</h3><p>iPhone, iPad und Android, jeweils passend zum Bildschirm und zu den Gewohnheiten der Plattform.</p></li>
@@ -147,8 +184,8 @@
   </section>
 
   <section class="section zapp-band" id="zapp" aria-labelledby="zapp-titel">
-    <div class="wrap split">
-      <div class="head">
+    <div class="wrap">
+      <div class="zapp-top">
         <div class="zapp-id">
           <img src="/assets/zapp-icon.png" srcset="/assets/zapp-icon@2x.png 2x" alt="App-Symbol von Zapp" width="76" height="76" loading="lazy" decoding="async">
           <div>
@@ -156,39 +193,46 @@
             <p class="status">Bald im App Store</p>
           </div>
         </div>
-        <p>Der Player für Ihre eigenen Senderlisten, Filme und Serien auf Apple&nbsp;TV und iPad. Mit TV-Guide, Favoriten, Weiterschauen und Kindersicherung.</p>
-        <div class="actions">
-          <a class="btn btn-primary" href="mailto:info@hevix-tech.de?subject=Hilfe%20zu%20Zapp">Hilfe zu Zapp</a>
-          <a class="btn btn-quiet" href="/datenschutz.html#zapp">Datenschutz bei Zapp</a>
+        <div class="zapp-intro">
+          <p>Der Player für Ihre eigenen Senderlisten, Filme und Serien auf Apple&nbsp;TV und iPad. 7&nbsp;Tage kostenlos testen, danach einmal kaufen und dauerhaft nutzen.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="mailto:info@hevix-tech.de?subject=Hilfe%20zu%20Zapp"><span>Hilfe zu <span translate="no">Zapp</span></span></a>
+            <a class="btn btn-quiet" href="/datenschutz.html#zapp">Datenschutz</a>
+          </div>
         </div>
-        <p class="fineprint">Zapp enthält keine Sender, Filme oder Serien und empfiehlt keine Anbieter. Sie brauchen eine eigene Liste oder ein eigenes Netzwerklaufwerk.</p>
       </div>
-      <ul class="points">
-        <li><h3>Erst testen, dann kaufen</h3><p>7&nbsp;Tage kostenlos ausprobieren, danach einmal kaufen und dauerhaft nutzen.</p></li>
-        <li><h3>Ihre Daten bleiben bei Ihnen</h3><p>Keine Werbung, kein Tracking. Zugangsdaten liegen nur im Schlüsselbund Ihres Geräts.</p></li>
-        <li><h3>Gemacht für die Fernbedienung</h3><p>Sender wechseln mit den Pfeiltasten, Filme und Serien dort weiterschauen, wo Sie aufgehört haben.</p></li>
-        <li><h3>In Ihrer Sprache</h3><p>Deutsch, Englisch, Französisch und Arabisch.</p></li>
+
+      <ul class="features">
+        <li><svg aria-hidden="true"><use href="#i-tv"/></svg><h3>Live-TV mit TV-Guide</h3><p>Senderliste, Programm von jetzt und später, Umschalten mit den Pfeiltasten.</p></li>
+        <li><svg aria-hidden="true"><use href="#i-film"/></svg><h3>Filme und Serien</h3><p>Mit Weiterschauen genau dort, wo Sie aufgehört haben.</p></li>
+        <li><svg aria-hidden="true"><use href="#i-star"/></svg><h3>Favoriten und Reihenfolge</h3><p>Sender und Gruppen so sortieren und ausblenden, wie Sie es mögen.</p></li>
+        <li><svg aria-hidden="true"><use href="#i-lock"/></svg><h3>Kindersicherung</h3><p>Gruppen mit einer PIN sperren, auch in der Suche.</p></li>
+        <li><svg aria-hidden="true"><use href="#i-drive"/></svg><h3>Eigene Videos</h3><p>Filme und Aufnahmen direkt vom eigenen Netzwerklaufwerk abspielen.</p></li>
+        <li><svg aria-hidden="true"><use href="#i-shield"/></svg><h3>Ohne Werbung und Tracking</h3><p>Zugangsdaten bleiben im Schlüsselbund Ihres Geräts.</p></li>
       </ul>
+      <p class="fineprint">Zapp enthält keine Sender, Filme oder Serien und empfiehlt keine Anbieter. Sie brauchen eine eigene Liste oder ein eigenes Netzwerklaufwerk.</p>
     </div>
   </section>
 
-  <section class="section about" id="ueber" aria-labelledby="ueber-titel">
-    <div class="wrap">
-      <h2 id="ueber-titel">Über <span translate="no">HEVIX&nbsp;-&nbsp;TECH</span></h2>
-      <p>Hinter <span translate="no">HEVIX&nbsp;-&nbsp;TECH</span> stehe ich, Kasem Ahmi. Ich komme aus der IT-Administration und entwickle eigene Apps mit einem Anspruch: Alles soll so einfach zu bedienen sein, dass man nicht darüber nachdenken muss.</p>
-    </div>
-  </section>
-
-  <section class="section contact" id="kontakt" aria-labelledby="kontakt-titel">
-    <div class="wrap">
-      <h2 id="kontakt-titel">Kontakt</h2>
-      <p class="intro">Fragen zu einer App, Feedback oder eine Idee für eine neue Funktion? Schreiben Sie einfach eine E-Mail.</p>
-      <div class="contact-box">
-        <a class="btn btn-primary" href="mailto:info@hevix-tech.de"><svg aria-hidden="true"><use href="#mail"/></svg>E-Mail schreiben</a>
-        <span class="contact-mail">info@hevix-tech.de</span>
-        <button class="btn btn-quiet btn-small copy" type="button" data-copy="info@hevix-tech.de" hidden><svg aria-hidden="true"><use href="#copy"/></svg>Adresse kopieren</button>
+  <section class="section closing" aria-label="Über und Kontakt">
+    <div class="wrap closing-grid">
+      <div class="about" id="ueber">
+        <h2>Über <span translate="no">HEVIX&nbsp;-&nbsp;TECH</span></h2>
+        <p>Hinter <span translate="no">HEVIX&nbsp;-&nbsp;TECH</span> stehe ich, Kasem Ahmi. Ich komme aus der IT-Administration und entwickle eigene Apps mit einem Anspruch: Alles soll so einfach zu bedienen sein, dass man nicht darüber nachdenken muss.</p>
       </div>
-      <p class="copy-state" role="status"></p>
+      <div class="contact-card" id="kontakt">
+        <h2>Kontakt</h2>
+        <p>Fragen zu einer App, Feedback oder eine Idee für eine neue Funktion? Schreiben Sie einfach.</p>
+        <div class="mail-row">
+          <svg class="mail-icon" aria-hidden="true"><use href="#mail"/></svg>
+          <a class="mail-link" href="mailto:info@hevix-tech.de">info@hevix-tech.de</a>
+          <button class="icon-btn copy" type="button" data-copy="info@hevix-tech.de" aria-label="E-Mail-Adresse kopieren" title="Adresse kopieren" hidden>
+            <svg class="i-copy" aria-hidden="true"><use href="#copy"/></svg>
+            <svg class="i-done" aria-hidden="true"><use href="#check"/></svg>
+          </button>
+        </div>
+        <p class="copy-state" role="status"></p>
+      </div>
     </div>
   </section>
 </main>

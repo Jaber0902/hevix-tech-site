@@ -153,17 +153,38 @@
 
   const copy = document.querySelector("[data-copy]");
   const state = document.querySelector(".copy-state");
-  if (copy && navigator.clipboard) {
+
+  // Ersatzweg, falls der Browser die Zwischenablage-Schnittstelle sperrt
+  const legacyCopy = (text) => {
+    const ta = document.createElement("textarea");
+    ta.value = text;
+    ta.setAttribute("readonly", "");
+    ta.style.position = "fixed";
+    ta.style.opacity = "0";
+    document.body.appendChild(ta);
+    ta.select();
+    let ok = false;
+    try { ok = document.execCommand("copy"); } catch { ok = false; }
+    ta.remove();
+    return ok;
+  };
+
+  if (copy) {
     copy.hidden = false;
     copy.addEventListener("click", async () => {
+      let ok = false;
       try {
-        await navigator.clipboard.writeText(copy.dataset.copy);
+        if (navigator.clipboard) { await navigator.clipboard.writeText(copy.dataset.copy); ok = true; }
+      } catch { ok = false; }
+      if (!ok) ok = legacyCopy(copy.dataset.copy);
+      if (ok) {
         state.textContent = "Adresse kopiert.";
-      } catch {
+        copy.classList.add("done");
+      } else {
         state.textContent = "Kopieren nicht möglich. Bitte die Adresse markieren und kopieren.";
       }
       clearTimeout(copy._t);
-      copy._t = setTimeout(() => { state.textContent = ""; }, 3000);
+      copy._t = setTimeout(() => { state.textContent = ""; copy.classList.remove("done"); }, 2500);
     });
   }
 })();

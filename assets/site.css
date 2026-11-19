@@ -358,8 +358,8 @@ a, button, summary { touch-action: manipulation; -webkit-tap-highlight-color: tr
 
 /* ---------- Abschnitte ---------- */
 
-.section { padding: 80px 0; border-top: 1px solid var(--line); }
-@media (min-width: 980px) { .section { padding: 112px 0; } }
+.section { padding: 64px 0; border-top: 1px solid var(--line); }
+@media (min-width: 980px) { .section { padding: 88px 0; } }
 
 .split { display: grid; gap: 36px; }
 @media (min-width: 980px) {
@@ -481,3 +481,74 @@ a, button, summary { touch-action: manipulation; -webkit-tap-highlight-color: tr
 .dev-tv { width: 31cqw; aspect-ratio: 16 / 9; place-items: center; align-content: center; }
 .dev-tv .mini-row { gap: 1.1cqw; }
 .dev-tv .mini-row i { width: 5.2cqw; height: auto; border-radius: .7cqw; }
+
+/* ---------- App-Regal ---------- */
+.shelf-section { border-top: 0; padding-top: 8px; }
+.shelf-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 24px; }
+.shelf-head p { color: var(--ink-soft); }
+.shelf { list-style: none; margin: 28px 0 0; padding: 0; display: grid; gap: 16px; }
+@media (min-width: 760px) { .shelf { grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); } }
+.app-card {
+  display: grid; grid-template-columns: auto 1fr; gap: 18px 20px; align-items: start;
+  padding: 22px; border-radius: var(--radius-l);
+  background: var(--paper-raised); border: 1px solid var(--line);
+}
+.app-card > img { width: 88px; height: 88px; border-radius: 20px; box-shadow: 0 12px 28px -14px rgba(14, 22, 48, .6); }
+.app-card h3 { font-size: var(--step-1); }
+.app-card p { color: var(--ink-soft); margin-top: 4px; }
+.app-foot { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding-top: 14px; border-top: 1px solid var(--line); }
+.app-card .status { margin-top: 0; }
+.chips { list-style: none; margin: 12px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.chips li { font-size: var(--step--1); font-weight: 600; padding: 4px 10px; border-radius: 999px; background: color-mix(in srgb, var(--ink) 7%, transparent); color: var(--ink-soft); }
+.app-next { background: transparent; border-style: dashed; }
+.next-icon {
+  width: 88px; height: 88px; border-radius: 20px; display: grid; place-items: center;
+  background: color-mix(in srgb, var(--ink) 6%, transparent); color: var(--ink-soft);
+}
+.next-icon svg { width: 44px; height: 44px; opacity: .55; }
+
+/* ---------- Zapp: Kopf + Funktionen ---------- */
+.zapp-top { display: grid; gap: 24px; align-items: center; }
+@media (min-width: 900px) { .zapp-top { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 56px; } }
+.zapp-top .zapp-id { margin-bottom: 0; }
+.zapp-intro p { color: var(--screen-soft); max-width: 36rem; }
+.zapp-intro .actions { margin-top: 22px; }
+.features { list-style: none; margin: 48px 0 0; padding: 0; display: grid; gap: 14px; }
+@media (min-width: 640px) { .features { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 980px) { .features { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.features li {
+  padding: 22px; border-radius: var(--radius-m);
+  background: rgba(255, 255, 255, .05); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .09);
+}
+.features svg { width: 30px; height: 30px; color: var(--orange); margin-bottom: 14px; }
+.features h3 { font-size: 1.08rem; }
+.features p { color: var(--screen-soft); margin-top: 6px; font-size: .98rem; }
+.zapp-band .fineprint { margin-top: 28px; max-width: 44rem; }
+
+/* ---------- Über + Kontakt ---------- */
+.closing-grid { display: grid; gap: 28px; align-items: start; }
+@media (min-width: 900px) { .closing-grid { grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: 56px; } }
+.closing .about p { margin-top: 16px; color: var(--ink-soft); max-width: 36rem; }
+.contact-card {
+  padding: 28px; border-radius: var(--radius-l);
+  background: var(--paper-raised); border: 1px solid var(--line);
+}
+.contact-card p { margin-top: 10px; color: var(--ink-soft); }
+.mail-row { display: flex; align-items: center; gap: 10px; margin-top: 22px; min-width: 0; }
+.mail-icon { width: 22px; height: 22px; flex: none; color: var(--orange); }
+.mail-link {
+  font-family: var(--font-display); font-weight: 700; font-size: var(--step-1);
+  overflow-wrap: anywhere; min-width: 0;
+}
+.icon-btn {
+  flex: none; display: inline-grid; place-items: center; width: 44px; height: 44px; margin-left: 2px;
+  border: 0; border-radius: 50%; cursor: pointer; color: var(--ink-soft); background: transparent;
+  transition: background-color .15s ease, color .15s ease, transform .15s ease;
+}
+.icon-btn:hover { background: color-mix(in srgb, var(--ink) 8%, transparent); color: var(--ink); }
+.icon-btn:active { transform: scale(.92); }
+.icon-btn svg { width: 20px; height: 20px; grid-area: 1 / 1; transition: opacity .15s ease, transform .2s ease; }
+.icon-btn .i-done { opacity: 0; transform: scale(.6); color: #2F9E5B; }
+.icon-btn.done .i-copy { opacity: 0; transform: scale(.6); }
+.icon-btn.done .i-done { opacity: 1; transform: scale(1); }
+.contact-card .copy-state { margin-top: 6px; min-height: 1.5em; font-size: var(--step--1); }
