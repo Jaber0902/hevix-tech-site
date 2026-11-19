@@ -621,6 +621,8 @@ a, button, summary { touch-action: manipulation; -webkit-tap-highlight-color: tr
 svg.bx { display: inline-block; width: .684em; height: .705em; vertical-align: baseline; overflow: visible;
   stroke-width: 12; margin: 0 .005em; }
 :is(h3, .btn, summary, .nav-links a, .ib-title, .channel p, .app-card h3) svg.bx { stroke-width: 18; }
+:is(.menu li a, .site-footer nav a, strong, b) svg.bx { stroke-width: 16; }
+:is(.menu li.sep a, .menu li.sep ~ li a) svg.bx { stroke-width: 14.5; }
 h2 svg.bx { stroke-width: 20; }
 h1 svg.bx { stroke-width: 22; }
 .bxw { white-space: nowrap; }
