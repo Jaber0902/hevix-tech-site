@@ -287,7 +287,7 @@ a, button, summary { touch-action: manipulation; -webkit-tap-highlight-color: tr
 
 /* Kanal Zapp */
 .ch-zapp { text-align: center; gap: 2cqw; align-content: center; }
-.ch-zapp img {
+.ch-zapp > img {
   width: 16cqw; height: 16cqw; margin: 0 auto; border-radius: 3.6cqw;
   box-shadow: 0 0 0 .25cqw rgba(255, 255, 255, .12), 0 2.5cqw 7cqw -1cqw rgba(250, 168, 41, .45);
 }
@@ -414,7 +414,7 @@ a, button, summary { touch-action: manipulation; -webkit-tap-highlight-color: tr
 .zapp-band .head p, .zapp-band .points p { color: var(--screen-soft); }
 .zapp-band .points li { border-color: rgba(255, 255, 255, .12); }
 .zapp-id { display: flex; align-items: center; gap: 18px; margin-bottom: 26px; }
-.zapp-id img { width: 76px; height: 76px; border-radius: 18px; box-shadow: 0 0 0 1px rgba(255, 255, 255, .12), 0 14px 34px -14px rgba(250, 168, 41, .55); }
+.zapp-id > img { width: 76px; height: 76px; border-radius: 18px; box-shadow: 0 0 0 1px rgba(255, 255, 255, .12), 0 14px 34px -14px rgba(250, 168, 41, .55); }
 .status {
   display: inline-flex; align-items: center; gap: 8px; margin-top: 6px;
   font-size: var(--step--1); font-weight: 650; color: var(--orange);
@@ -591,3 +591,12 @@ a, button, summary { touch-action: manipulation; -webkit-tap-highlight-color: tr
 .wordmark img { display: block; height: 1em; width: auto; }
 .zapp-id h2.wordmark { font-size: 2.6rem; line-height: 1; margin: 0 0 6px; }
 .ch-zapp p.wordmark { font-size: max(4.2cqw, 18px); line-height: 1; display: flex; justify-content: center; }
+
+/* ---------- Kopf bleibt stehen, Inhalt scrollt vorbei (auch Apps und XiPlay) ---------- */
+@media (min-width: 980px) {
+  .split .shelf { margin-top: 0; grid-template-columns: minmax(0, 1fr); }
+  .split .shelf-head { display: block; }
+  .split.wrap > .zapp-top { grid-template-columns: minmax(0, 1fr); gap: 26px; align-items: start; }
+  .band-body .nas { margin-top: 0; grid-template-columns: minmax(0, 1fr); gap: 28px; padding: 32px; }
+  .band-body .features { margin-top: 28px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
