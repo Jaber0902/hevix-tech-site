@@ -15,9 +15,8 @@
   const screen = document.querySelector(".tv-screen");
   if (screen) {
     const channels = [
-      { name: "HEVIX - TECH", now: "Willkommen", progress: 0.32 },
+      { name: "HEVIX - TECH", now: "Eigene Apps für jeden Bildschirm", progress: 0.32 },
       { name: "Apps", now: "Apps für Handy, Tablet und Fernseher", progress: 0.58 },
-      { name: "Webseiten", now: "Webseiten für Ihr Geschäft", progress: 0.44 },
       { name: "Zapp", now: "Zapp, bald im App Store", progress: 0.76 },
     ];
     const views = [...screen.querySelectorAll(".channel")];
@@ -56,7 +55,7 @@
       now.textContent = `Jetzt: ${c.now}`;
       next.textContent = `Danach: ${n.name}`;
       bar.style.width = `${Math.round(c.progress * 100)}%`;
-      logo.innerHTML = i === 3
+      logo.innerHTML = c.name === "Zapp"
         ? '<img src="/assets/zapp-icon.png" alt="">'
         : logoMark;
       dots.forEach((d, k) => d.setAttribute("aria-current", k === i ? "true" : "false"));

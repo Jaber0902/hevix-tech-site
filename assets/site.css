@@ -130,10 +130,6 @@ a, button, summary { touch-action: manipulation; -webkit-tap-highlight-color: tr
 .nav-links .nav-cta { margin-left: 6px; color: var(--on-orange); background: var(--orange); }
 .nav-links .nav-cta:hover { color: var(--on-orange); background: #FFB847; }
 
-@media (min-width: 820px) {
-  .nav-links { display: flex; }
-  .menu { display: none; }
-}
 
 /* Menü auf dem Handy: funktioniert auch ohne JavaScript */
 .menu { position: relative; }
@@ -144,9 +140,17 @@ a, button, summary { touch-action: manipulation; -webkit-tap-highlight-color: tr
 }
 .menu summary::-webkit-details-marker { display: none; }
 .menu summary svg { width: 18px; height: 18px; }
+.menu summary::after {
+  content: ""; width: 7px; height: 7px; margin-left: 2px;
+  border-right: 2px solid currentColor; border-bottom: 2px solid currentColor;
+  transform: translateY(-2px) rotate(45deg); transition: transform .2s ease;
+}
+.menu[open] summary::after { transform: translateY(2px) rotate(-135deg); }
+.menu li.sep { border-top: 1px solid var(--line); margin-top: 6px; padding-top: 6px; }
+.menu li.sep a, .menu li.sep + li a { color: var(--ink-soft); font-weight: 500; min-height: 44px; }
 .menu[open] summary { background: var(--ink); color: var(--paper); }
 .menu ul {
-  position: absolute; right: 0; top: calc(100% + 10px); min-width: 220px;
+  position: absolute; right: 0; top: calc(100% + 10px); min-width: 240px;
   list-style: none; margin: 0; padding: 8px;
   background: var(--paper-raised); border: 1px solid var(--line); border-radius: var(--radius-m);
   box-shadow: 0 18px 50px -20px rgba(10, 15, 34, .45);

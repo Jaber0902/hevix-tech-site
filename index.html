@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>HEVIX - TECH – Apps für jeden Bildschirm, Webseiten für Ihr Geschäft</title>
-<meta name="description" content="HEVIX - TECH aus Schwülper bei Braunschweig entwickelt Apps für Handy, Tablet und Fernseher und baut Webseiten, die auf jedem Bildschirm einfach zu bedienen sind.">
+<title>HEVIX - TECH – Eigene Apps für jeden Bildschirm</title>
+<meta name="description" content="HEVIX - TECH entwickelt eigene Apps für Handy, Tablet und Fernseher und veröffentlicht sie in den App-Stores. Die erste App: Zapp für Apple TV und iPad.">
 <link rel="canonical" href="https://hevix-tech.de/">
 <meta name="theme-color" content="#EDF0F5" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0A0F22" media="(prefers-color-scheme: dark)">
@@ -12,7 +12,7 @@
 <meta property="og:locale" content="de_DE">
 <meta property="og:url" content="https://hevix-tech.de/">
 <meta property="og:title" content="HEVIX - TECH">
-<meta property="og:description" content="Apps für jeden Bildschirm. Webseiten für Ihr Geschäft.">
+<meta property="og:description" content="Eigene Apps für jeden Bildschirm.">
 <meta property="og:image" content="https://hevix-tech.de/assets/og-image.png">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -52,19 +52,15 @@
   <div class="wrap">
     <a class="brand" href="/" aria-label="HEVIX - TECH, zur Startseite"><svg viewBox="0 0 354 48" aria-hidden="true"><use href="#logo"/></svg></a>
     <nav aria-label="Hauptmenü">
-      <ul class="nav-links">
-        <li><a href="#apps">Apps</a></li>
-        <li><a href="#webseiten">Webseiten</a></li>
-        <li><a href="#zapp">Zapp</a></li>
-        <li><a class="btn btn-primary btn-small nav-cta" href="#kontakt">Kontakt</a></li>
-      </ul>
       <details class="menu">
         <summary><svg aria-hidden="true"><use href="#menu"/></svg>Menü</summary>
         <ul>
           <li><a href="#apps">Apps</a></li>
-          <li><a href="#webseiten">Webseiten</a></li>
-          <li><a href="#zapp">Zapp</a></li>
+          <li><a href="#zapp"><span translate="no">Zapp</span></a></li>
+          <li><a href="#ueber"><span>Über <span translate="no">HEVIX&nbsp;-&nbsp;TECH</span></span></a></li>
           <li><a href="#kontakt">Kontakt</a></li>
+          <li class="sep"><a href="/impressum.html">Impressum</a></li>
+          <li><a href="/datenschutz.html">Datenschutz</a></li>
         </ul>
       </details>
     </nav>
@@ -75,22 +71,22 @@
   <section class="hero" aria-labelledby="titel">
     <div class="wrap">
       <div class="hero-text">
-        <h1 id="titel"><span>Apps für jeden Bildschirm.</span> <span>Webseiten für Ihr Geschäft.</span></h1>
-        <p class="lead"><span translate="no">HEVIX&nbsp;-&nbsp;TECH</span> ist ein kleines Studio aus Schwülper bei Braunschweig. Ich entwickle Apps für Handy, Tablet und Fernseher und baue Webseiten, die auf jedem Bildschirm einfach zu bedienen sind.</p>
+        <h1 id="titel">Eigene Apps für jeden Bildschirm.</h1>
+        <p class="lead"><span translate="no">HEVIX&nbsp;-&nbsp;TECH</span> entwickelt eigene Apps für Handy, Tablet und Fernseher und bringt sie in die App-Stores. Die erste App ist <span translate="no">Zapp</span>, der Player für Apple&nbsp;TV und iPad.</p>
         <div class="actions">
-          <a class="btn btn-primary" href="mailto:info@hevix-tech.de?subject=Projektanfrage"><svg aria-hidden="true"><use href="#mail"/></svg>Projekt anfragen</a>
-          <a class="btn btn-quiet" href="#zapp">Zapp ansehen</a>
+          <a class="btn btn-primary" href="#zapp"><span><span translate="no">Zapp</span> ansehen</span></a>
+          <a class="btn btn-quiet" href="#kontakt">Kontakt</a>
         </div>
       </div>
 
       <figure class="tv">
         <div class="tv-bezel">
           <div class="tv-screen" tabindex="0" role="group" aria-roledescription="Fernseher"
-               aria-label="Fernseher mit vier Kanälen. Mit den Pfeiltasten nach oben und unten wechseln Sie den Kanal.">
+               aria-label="Fernseher mit drei Kanälen. Mit den Pfeiltasten nach oben und unten wechseln Sie den Kanal.">
             <div class="channel ch-home" data-channel="0">
               <svg viewBox="0 0 48 48" aria-hidden="true"><use href="#mark"/></svg>
-              <p>Apps und Webseiten</p>
-              <p class="sub">aus Schwülper bei Braunschweig</p>
+              <p>Eigene Apps</p>
+              <p class="sub">für jeden Bildschirm</p>
             </div>
 
             <div class="channel" data-channel="1" hidden aria-hidden="true">
@@ -101,17 +97,7 @@
               </div>
             </div>
 
-            <div class="channel" data-channel="2" hidden aria-hidden="true">
-              <div class="mini-web">
-                <div class="mini-browser">
-                  <div class="bar"><b></b><b></b><b></b></div>
-                  <div class="page"><i class="nav"></i><div class="mh"></div><div class="lines"><i></i><i></i><i></i></div></div>
-                </div>
-                <div class="mini-phone"><div class="page"><i class="h"></i><i></i><i></i><i class="o"></i><i></i></div></div>
-              </div>
-            </div>
-
-            <div class="channel ch-zapp" data-channel="3" hidden aria-hidden="true">
+            <div class="channel ch-zapp" data-channel="2" hidden aria-hidden="true">
               <img src="/assets/zapp-icon.png" srcset="/assets/zapp-icon@2x.png 2x" alt="" width="192" height="192">
               <p>Zapp</p>
               <p class="sub">Bald im App Store</p>
@@ -121,7 +107,7 @@
               <div class="ib-logo"><svg viewBox="0 0 48 48"><use href="#mark"/></svg></div>
               <div>
                 <div class="ib-title"><span class="ib-num">1</span><span class="ib-name"><span translate="no">HEVIX&nbsp;-&nbsp;TECH</span></span><span class="ib-badge">HD</span></div>
-                <p class="ib-now">Jetzt: Willkommen</p>
+                <p class="ib-now">Jetzt: Eigene Apps für jeden Bildschirm</p>
                 <div class="ib-bar"><i></i></div>
                 <p class="ib-next">Danach: Apps</p>
               </div>
@@ -148,31 +134,15 @@
   <section class="section" id="apps" aria-labelledby="apps-titel">
     <div class="wrap split">
       <div class="head">
-        <h2 id="apps-titel">Apps für jeden Bildschirm</h2>
-        <p>Ich entwickle Apps, die sich auf ihrem Gerät zu Hause fühlen: flüssig, klar und so bedienbar, wie man es dort gewohnt ist, ob per Touch, Maus oder Fernbedienung.</p>
+        <h2 id="apps-titel">Apps, die sich zu Hause fühlen</h2>
+        <p><span translate="no">HEVIX&nbsp;-&nbsp;TECH</span> entwickelt seine Apps selbst, veröffentlicht sie selbst und kümmert sich dauerhaft um sie. Jede App soll auf ihrem Gerät so bedienbar sein, wie man es dort gewohnt ist: per Touch, Maus oder Fernbedienung.</p>
       </div>
       <ul class="points">
-        <li><h3>Handy und Tablet</h3><p>Für iPhone, iPad und Android, jeweils passend zum Bildschirm und zu den Gewohnheiten der Plattform.</p></li>
-        <li><h3>Fernseher</h3><p>Apps für Apple&nbsp;TV, Android&nbsp;TV und andere Smart-TVs: große Schrift, ein klarer Fokus und jede Funktion mit der Fernbedienung erreichbar.</p></li>
+        <li><h3>Handy und Tablet</h3><p>iPhone, iPad und Android, jeweils passend zum Bildschirm und zu den Gewohnheiten der Plattform.</p></li>
+        <li><h3>Fernseher</h3><p>Apple&nbsp;TV, Android&nbsp;TV und andere Smart-TVs: große Schrift, ein klarer Fokus und jede Funktion mit der Fernbedienung erreichbar.</p></li>
         <li><h3>In mehreren Sprachen</h3><p>Zum Beispiel Deutsch, Englisch, Französisch und Arabisch, auch mit Schrift von rechts nach links.</p></li>
-        <li><h3>Bis in den Store</h3><p>Testzeitraum, Kauf in der App, Angaben zum Datenschutz und die Veröffentlichung im App Store oder bei Google Play.</p></li>
+        <li><h3>Direkt aus dem Store</h3><p>Die Apps gibt es in den offiziellen Stores, zum Beispiel im App Store und bei Google Play.</p></li>
       </ul>
-    </div>
-  </section>
-
-  <section class="section" id="webseiten" aria-labelledby="web-titel">
-    <div class="wrap">
-      <div class="head">
-        <h2 id="web-titel">Webseiten für Ihr Geschäft</h2>
-        <p>Eine gute Webseite zeigt schnell, wer Sie sind, was Sie anbieten und wie man Sie erreicht. Am Handy genauso wie am Rechner.</p>
-      </div>
-      <ol class="steps">
-        <li><div><h3>Gespräch</h3><p>Wir klären, was Ihre Seite können soll und wen sie erreichen soll.</p></div></li>
-        <li><div><h3>Entwurf</h3><p>Sie sehen Ihre Seite, bevor sie online geht, und sagen, was anders werden soll.</p></div></li>
-        <li><div><h3>Umsetzung</h3><p>Texte, Bilder, die Ansicht fürs Handy, Impressum und Datenschutz.</p></div></li>
-        <li><div><h3>Online</h3><p>Ihre Domain, eine sichere Verbindung und eine kurze Einweisung.</p></div></li>
-      </ol>
-      <p class="note"><strong>Ohne Tracking.</strong> Ihre Besucher werden nicht verfolgt, und Sie brauchen kein Cookie-Banner, solange Sie keine Dienste einbinden, die eines verlangen.</p>
     </div>
   </section>
 
@@ -205,16 +175,16 @@
   <section class="section about" id="ueber" aria-labelledby="ueber-titel">
     <div class="wrap">
       <h2 id="ueber-titel">Über <span translate="no">HEVIX&nbsp;-&nbsp;TECH</span></h2>
-      <p>Hinter <span translate="no">HEVIX&nbsp;-&nbsp;TECH</span> stehe ich, Kasem Ahmi. Ich komme aus der IT-Administration und entwickle Apps und Webseiten mit einem Anspruch: Alles soll so einfach zu bedienen sein, dass man nicht darüber nachdenken muss.</p>
+      <p>Hinter <span translate="no">HEVIX&nbsp;-&nbsp;TECH</span> stehe ich, Kasem Ahmi. Ich komme aus der IT-Administration und entwickle eigene Apps mit einem Anspruch: Alles soll so einfach zu bedienen sein, dass man nicht darüber nachdenken muss.</p>
     </div>
   </section>
 
   <section class="section contact" id="kontakt" aria-labelledby="kontakt-titel">
     <div class="wrap">
-      <h2 id="kontakt-titel">Erzählen Sie mir von Ihrem Projekt</h2>
-      <p class="intro">Ob App oder Webseite: Schreiben Sie mir kurz, worum es geht. Ich melde mich so schnell wie möglich.</p>
+      <h2 id="kontakt-titel">Kontakt</h2>
+      <p class="intro">Fragen zu einer App, Feedback oder eine Idee für eine neue Funktion? Schreiben Sie einfach eine E-Mail.</p>
       <div class="contact-box">
-        <a class="btn btn-primary" href="mailto:info@hevix-tech.de?subject=Projektanfrage"><svg aria-hidden="true"><use href="#mail"/></svg>E-Mail schreiben</a>
+        <a class="btn btn-primary" href="mailto:info@hevix-tech.de"><svg aria-hidden="true"><use href="#mail"/></svg>E-Mail schreiben</a>
         <span class="contact-mail">info@hevix-tech.de</span>
         <button class="btn btn-quiet btn-small copy" type="button" data-copy="info@hevix-tech.de" hidden><svg aria-hidden="true"><use href="#copy"/></svg>Adresse kopieren</button>
       </div>
@@ -226,7 +196,7 @@
 <footer class="site-footer">
   <div class="wrap">
     <svg viewBox="0 0 354 48" role="img" aria-label="HEVIX - TECH"><use href="#logo"/></svg>
-    <span>© 2026 <span translate="no">HEVIX&nbsp;-&nbsp;TECH</span>, Schwülper</span>
+    <span>© 2026 <span translate="no">HEVIX&nbsp;-&nbsp;TECH</span></span>
     <nav aria-label="Rechtliches">
       <a href="/impressum.html">Impressum</a>
       <a href="/datenschutz.html">Datenschutz</a>
