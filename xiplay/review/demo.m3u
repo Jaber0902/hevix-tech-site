@@ -1,0 +1,52 @@
+#EXTM3U
+# Demo-Liste von XiPlay für die App-Prüfung (App Review). Nur legale Inhalte:
+# - Sender: offizielle, frei zugängliche Streams der Sender selbst (eigene Adresse bzw. eigenes CDN),
+#   alle weltweit abrufbar (keine nur in Deutschland freigegebenen Varianten). Verlinkt, nicht
+#   weiterverbreitet (vgl. EuGH C-466/12 „Svensson“, C-348/13 „BestWater“). Rechte am Programm: die Sender.
+# - Blender Open Movies und Caminandes: (CC) Blender Foundation | studio.blender.org – CC BY 3.0/4.0.
+#   Dateien von download.blender.org bzw. archive.org.
+# - Nosferatu (1922): gemeinfrei (Murnau † 1931, Galeen † 1949). Datei von archive.org.
+# - Kein TV-Guide (url-tvg): freie Programmdaten gibt es nur aus Drittquellen, die nicht von den Sendern stammen.
+# Vor dem Einreichen alle Einträge prüfen – Sender ändern ihre Adressen gelegentlich.
+#EXTINF:-1 tvg-chno="1" tvg-logo="https://i.imgur.com/8MRNFb9.png" group-title="English",DW English
+https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/master.m3u8
+#EXTINF:-1 tvg-chno="2" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_FRANCE_24/images/LOGO_HD/image.png" group-title="English",France 24 English
+https://live.france24.com/hls/live/2037218/F24_EN_HI_HLS/master_5000.m3u8
+#EXTINF:-1 tvg-chno="3" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/NHK_World_Japan.png" group-title="English",NHK World-Japan
+https://masterpl.hls.nhkworld.jp/hls/w/live/smarttv.m3u8
+#EXTINF:-1 tvg-chno="4" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Red_Bull_TV.png" group-title="English",Red Bull TV
+https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8
+#EXTINF:-1 tvg-chno="5" tvg-logo="https://i.imgur.com/LH0Gctv.png" group-title="Deutsch",tagesschau24
+https://tagesschau.akamaized.net/hls/live/2020115/tagesschau/tagesschau_1/master.m3u8
+#EXTINF:-1 tvg-chno="6" tvg-logo="https://staticcyl.euronews.com/wp-content/uploads/2023/03/Logo_Euronews_white-on-neon_german_RGB.png" group-title="Deutsch",Euronews Deutsch
+https://cdn-euronews.akamaized.net/live/eds/euronews-de/25027/index.m3u8
+#EXTINF:-1 tvg-chno="7" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Logo_NDR_Fernsehen_2017.svg/960px-Logo_NDR_Fernsehen_2017.svg.png" group-title="Deutsch",NDR International
+https://ndrint.akamaized.net/hls/live/2020766/ndr_int/index.m3u8
+#EXTINF:-1 tvg-chno="8" tvg-logo="https://i.imgur.com/vZdNp5S.png" group-title="Deutsch",KiKA
+https://kikahls.akamaized.net/hls/live/2022690/livetvkika_ww/master.m3u8
+#EXTINF:-1 tvg-chno="9" tvg-logo="https://i.imgur.com/8MRNFb9.png" group-title="Arabisch",DW عربية
+https://dwamdstream103.akamaized.net/hls/live/2015526/dwstream103/master.m3u8
+#EXTINF:-1 tvg-chno="10" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_FRANCE_24/images/LOGO_HD/image.png" group-title="Arabisch",France 24 عربي
+https://live.france24.com/hls/live/2037222/F24_AR_HI_HLS/master_5000.m3u8
+#EXTINF:-1 tvg-logo="https://archive.org/services/img/BigBuckBunny_124" group-title="Blender Open Movies",Big Buck Bunny (2008)
+https://archive.org/download/BigBuckBunnyFULLHD60FPS/Big%20Buck%20Bunny%20-%20FULL%20HD%2060FPS.mp4
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/8/8f/Sintel_poster.jpg" group-title="Blender Open Movies",Sintel (2010)
+https://download.blender.org/durian/movies/Sintel.2010.1080p.mkv
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/7/70/Tos-poster.png" group-title="Blender Open Movies",Tears of Steel (2012)
+https://download.blender.org/demo/movies/ToS/tears_of_steel_720p.mov
+#EXTINF:-1 tvg-logo="https://archive.org/services/img/spring_blenderopenmovie" group-title="Blender Open Movies",Spring (2019)
+https://archive.org/download/spring_blenderopenmovie/Spring%20-%20Blender%20Open%20Movie%20-%20YouTube.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/services/img/sprite-fright" group-title="Blender Open Movies",Sprite Fright (2021)
+https://archive.org/download/sprite-fright/Sprite%20Fright%20-%20Open%20Movie%20by%20Blender%20Studio-804p.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/services/img/charge-blender-open-movie-1608p" group-title="Blender Open Movies",Charge (2022)
+https://archive.org/download/charge-blender-open-movie-1608p/Charge%20-%20Blender%20Open%20Movie%201608p.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/services/img/wing_it" group-title="Blender Open Movies",Wing It! (2023)
+https://archive.org/download/wing_it/wing_it.ia.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/services/img/Nosferatu1922" group-title="Klassiker",Nosferatu (1922)
+https://archive.org/download/Nosferatu1922/Nosferatu.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/services/img/Caminandes1LlamaDrama" group-title="Blender Serien",Caminandes S01E01 Llama Drama
+https://archive.org/download/Caminandes1LlamaDrama/01_llama_drama_1080p.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/services/img/Caminandes2GranDillama" group-title="Blender Serien",Caminandes S01E02 Gran Dillama
+https://archive.org/download/Caminandes2GranDillama/02_gran_dillama_1080p.mp4
+#EXTINF:-1 tvg-logo="https://archive.org/services/img/CaminandesLlamigos" group-title="Blender Serien",Caminandes S01E03 Llamigos
+https://archive.org/download/CaminandesLlamigos/Caminandes_%20Llamigos-1080p.mp4
