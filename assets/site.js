@@ -2,6 +2,7 @@
    - Fernseher: einschalten (einmal beim Laden), Kanäle wechseln per Knopf, Pfeiltaste, Wischen oder Kanalliste
    - Uhr in der Infoleiste
    - Menü auf dem Handy schließen, E-Mail-Adresse kopieren
+   - XiPlay-Logo: Schläger-Animation wie in der App (Bereich XiPlay und Kanal XiPlay im Fernseher)
    Ohne GSAP oder bei „Bewegung reduzieren“ passiert alles sofort, ohne Animation. */
 (function () {
   "use strict";
@@ -9,6 +10,63 @@
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
   const hasGsap = () => typeof window.gsap !== "undefined";
   const animate = () => hasGsap() && !reduce.matches;
+
+  /* ---------- XiPlay-Logo: Schläger-Animation (wie in der App) ---------- */
+  // Der orange X-Balken versinkt im Boden, kommt ausgeholt hoch, schwingt um sein unteres Ende wie ein
+  // Schläger und trifft das Play-Dreieck. Das fliegt hoch, dreht sich, landet auf dem i, federt und leuchtet.
+  // 3 s – gleicher Ablauf wie in der Apple-TV-App (Zapp/UI/Components.swift, LogoMotion). Maße in
+  // Einheiten der viewBox 397 × 120. Schrift und weißer Strich bewegen sich nie.
+  const swings = new Map();
+
+  function buildSwing(svg) {
+    const g = window.gsap;
+    const bar = svg.querySelector(".xp-bar");
+    const pm = svg.querySelector(".xp-pm");
+    const pr = svg.querySelector(".xp-pr");
+    const ps = svg.querySelector(".xp-ps");
+    const glow = svg.querySelector(".xp-glow");
+    g.set(bar, { svgOrigin: "11.35 85.23" });   // unteres Ende des Balkens
+    g.set(pr, { svgOrigin: "97.7 9.8" });       // Mitte des Dreiecks
+    g.set(ps, { svgOrigin: "97.7 19.6" });      // Unterkante des Dreiecks
+    return g.timeline({ paused: true })
+      // Balken: versinken – ausgeholt auftauchen – weiter ausholen – Schwung bis zum Treffer – zurückfedern
+      .to(bar, { y: 110, duration: 0.35, ease: "power1.in" }, 0)
+      .set(bar, { rotation: -68.5 }, 0.35)
+      .to(bar, { y: 0, duration: 0.75, ease: "power1.out" }, 0.40)
+      .to(bar, { rotation: -83.5, duration: 0.30, ease: "power1.inOut" }, 1.15)
+      .to(bar, { rotation: 11, duration: 0.18, ease: "power1.in" }, 1.45)
+      .to(bar, { rotation: 0, duration: 0.45, ease: "back.out(3)" }, 1.63)
+      // Dreieck: Treffer – hochfliegen und drehen – fallen – landen, federn, leuchten
+      .to(ps, { scaleX: 1.25, scaleY: 0.75, duration: 0.05, ease: "none" }, 1.60)
+      .to(ps, { scaleX: 1, scaleY: 1, duration: 0.15, ease: "none" }, 1.65)
+      .to(pm, { x: 10, y: -42, duration: 0.56, ease: "power1.out" }, 1.66)
+      .to(pm, { x: 0, y: 0, duration: 0.40, ease: "power1.in" }, 2.22)
+      .fromTo(pr, { rotation: 0 }, { rotation: 360, duration: 0.96, ease: "power1.inOut" }, 1.66)
+      .to(ps, { scaleX: 1.25, scaleY: 0.7, duration: 0.07, ease: "none" }, 2.62)
+      .to(ps, { scaleX: 1, scaleY: 1, duration: 0.31, ease: "back.out(3)" }, 2.69)
+      .to(glow, { opacity: 1, duration: 0.12, ease: "none" }, 2.62)
+      .to(glow, { opacity: 0, duration: 0.26, ease: "power1.out" }, 2.74);
+  }
+
+  // Abspielen (nicht neu starten, solange es läuft). Ohne GSAP oder mit „Bewegung reduzieren“: steht still.
+  function swing(svg) {
+    if (!svg || !animate()) return;
+    let tl = swings.get(svg);
+    if (!tl) { tl = buildSwing(svg); swings.set(svg, tl); }
+    if (!tl.isActive()) tl.restart();
+  }
+
+  // XiPlay-Bereich: beim Hineinscrollen, danach alle 12 s solange sichtbar, beim Darüberfahren und Antippen
+  const bandLogo = document.querySelector("#xiplay .xp-logo");
+  if (bandLogo && "IntersectionObserver" in window) {
+    let repeat = null;
+    new IntersectionObserver((entries) => entries.forEach((e) => {
+      clearInterval(repeat);
+      if (e.isIntersecting) { swing(bandLogo); repeat = setInterval(() => swing(bandLogo), 12000); }
+    }), { threshold: 0.6 }).observe(bandLogo);
+    bandLogo.addEventListener("pointerenter", () => swing(bandLogo));
+    bandLogo.addEventListener("click", () => swing(bandLogo));
+  }
 
   /* ---------- Fernseher ---------- */
 
@@ -92,7 +150,8 @@
         .add(() => { show(target); paintInfo(target); })
         .fromTo(views[target], { scale: 1.035 }, { scale: 1, duration: 0.45, ease: "power3.out" }, ">")
         .to(staticLayer, { autoAlpha: 0, duration: 0.22, ease: "power1.out" }, "<")
-        .fromTo(titleRow, { y: 6, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.3, ease: "power2.out" }, "<0.05");
+        .fromTo(titleRow, { y: 6, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.3, ease: "power2.out" }, "<0.05")
+        .add(() => swing(views[target].querySelector(".xp-logo")), "<0.1");
     }
 
     const zap = (dir) => tune(current + dir);

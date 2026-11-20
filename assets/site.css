@@ -605,7 +605,9 @@ a, button, summary { touch-action: manipulation; -webkit-tap-highlight-color: tr
 
 /* ---------- XiPlay-Schriftzug (Vektor aus Montserrat) ---------- */
 .wordmark img { display: block; height: 1em; width: auto; }
-.zapp-id h2.wordmark { font-size: 2.6rem; line-height: 1; margin: 0 0 6px; }
+/* XiPlay-Logo in Ebenen (animiert per site.js) – sieht in Ruhe genau aus wie xiplay-logo.svg */
+.wordmark .xp-logo { display: block; height: 1em; width: auto; aspect-ratio: 397 / 120; overflow: visible; }
+.zapp-id h2.wordmark { font-size: 3.1rem; line-height: 1; margin: 0 0 6px; }
 .ch-zapp p.wordmark { font-size: max(4.2cqw, 18px); line-height: 1; display: flex; justify-content: center; }
 
 /* ---------- Kopf bleibt stehen, Inhalt scrollt vorbei (auch Apps und XiPlay) ---------- */
